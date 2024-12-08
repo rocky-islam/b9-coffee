@@ -5,12 +5,15 @@ import SingleCoffee from './SingleCoffee';
 
 const Coffees = () => {
     const [coffee, setCoffee] = useState([])
+    const [viewCoffee , setViewCoffee] = useState(coffee)
+    console.log(viewCoffee)
 
     useEffect(() =>{
         fetch(`http://localhost:5000/coffees`)
         .then(res => res.json())
         .then(data =>{
-            setCoffee(data)
+            setCoffee(data);
+            setViewCoffee(data);
         })
     },[])
 
@@ -26,9 +29,11 @@ const Coffees = () => {
                 <div>
                     <div className='grid grid-cols-2 gap-6 mx-20'>
                         {
-                            coffee.map(item =><SingleCoffee
+                            viewCoffee.map(item =><SingleCoffee
                             key={item._id}
                             item={item}
+                            viewCoffee={viewCoffee}
+                            setViewCoffee={setViewCoffee}
                             >
                             </SingleCoffee>)
                         }
