@@ -2,6 +2,7 @@ import NavBar from "../../components/Nav/NavBar";
 import coverIng from "../../../assets/images/more/11.png";
 import { Link } from "react-router";
 import Swal from "sweetalert2";
+import Footer from "../../components/Footer/Footer";
 
 const AddCoffee = () => {
 
@@ -173,6 +174,7 @@ const AddCoffee = () => {
         </div>
         </div>
       </div>
+      <Footer></Footer>
     </div>
   );
 };

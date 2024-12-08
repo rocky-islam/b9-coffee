@@ -2,6 +2,7 @@ import { Link, useLoaderData } from "react-router";
 import NavBar from "../components/Nav/NavBar";
 import coverIng from "../../assets/images/more/11.png";
 import Swal from "sweetalert2";
+import Footer from "../components/Footer/Footer";
 
 const UpdateCoffee = () => {
   const coffee = useLoaderData();
@@ -207,6 +208,7 @@ const UpdateCoffee = () => {
           </div>
         </div>
       </div>
+      <Footer></Footer>
     </div>
   );
 };

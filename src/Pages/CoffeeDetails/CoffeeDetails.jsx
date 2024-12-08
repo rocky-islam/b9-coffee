@@ -1,5 +1,6 @@
 import { useLoaderData } from "react-router";
 import NavBar from "../components/Nav/NavBar";
+import Footer from "../components/Footer/Footer";
 
 const CoffeeDetails = () => {
   const coffee = useLoaderData();
@@ -26,6 +27,7 @@ const CoffeeDetails = () => {
         </div>
       </div>
       </div>
+      <Footer></Footer>
     </div>
   );
 };
